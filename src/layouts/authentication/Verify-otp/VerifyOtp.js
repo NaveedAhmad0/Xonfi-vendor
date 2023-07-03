@@ -51,10 +51,10 @@ function Basic() {
 			// }
 			console.log(response?.data);
 
-			if (response.data.statusCode === 200) {
-				setSuccess(true);
-				navigate("/dashboard");
-			}
+			setSuccess(true);
+			navigate("/dashboard");
+			// if (response.data.statusCode === 200) {
+			// }
 		} catch (err) {
 			// if (!err?.response) {
 			// 	setErrMsg("No Server Response");
@@ -138,7 +138,7 @@ function Basic() {
 								<MDBox mt={4} mb={1}>
 									<MDButton
 										onClick={(event) => onSubmit(event)}
-										href="/admin/dashboard"
+										// href="/admin/dashboard"
 										variant="gradient"
 										color="info"
 										fullWidth>

@@ -126,16 +126,17 @@ function Dashboard() {
 			});
 	};
 
-	useEffect(() => {
-		if (!token) {
-			navigate("/authentication/sign-in");
-		} else {
-			(async () => await getKycPendingUsers())();
-			(async () => await getNumberOfUsers())();
-			(async () => await getCompletedProjects())();
-			(async () => await getUserDetails())();
-		}
-	}, []);
+	// useEffect(() => {
+	// 	if (!token) {
+	// 		navigate("/authentication/sign-in");
+	// 	}
+	// 	else {
+	// 		(async () => await getKycPendingUsers())();
+	// 		(async () => await getNumberOfUsers())();
+	// 		(async () => await getCompletedProjects())();
+	// 		(async () => await getUserDetails())();
+	// 	}
+	// }, []);
 
 	return (
 		<DashboardLayout>
