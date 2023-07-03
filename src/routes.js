@@ -117,22 +117,22 @@ const routes = [
 		route: "/authentication/sign-in",
 		component: <SignIn />,
 	},
-	{
-		type: "collapse",
-		name: "Sign Up",
-		key: "sign-up",
-		icon: <Icon fontSize="small">signup</Icon>,
-		route: "/authentication/sign-up",
-		component: <SignUp />,
-	},
-	{
-		type: "collapse",
-		name: "Vefify Otp",
-		key: "verify-otp",
-		icon: <Icon fontSize="small">signup</Icon>,
-		route: "/authentication/verify-otp",
-		component: <VerifyOtp />,
-	},
+	// {
+	// 	type: "collapse",
+	// 	name: "Sign Up",
+	// 	key: "sign-up",
+	// 	icon: <Icon fontSize="small">signup</Icon>,
+	// 	route: "/authentication/sign-up",
+	// 	component: <SignUp />,
+	// },
+	// {
+	// 	type: "collapse",
+	// 	name: "Vefify Otp",
+	// 	key: "verify-otp",
+	// 	icon: <Icon fontSize="small">signup</Icon>,
+	// 	route: "/authentication/verify-otp",
+	// 	component: <VerifyOtp />,
+	// },
 ];
 
 export default routes;

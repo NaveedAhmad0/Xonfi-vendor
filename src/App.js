@@ -175,7 +175,7 @@ export default function App() {
 						<Sidenav
 							color={sidenavColor}
 							// brand={(transparentSidenav && !darkMode) || whiteSidenav ? brandDark : brandWhite}
-							brandName="ElimPay Dashboard"
+							brandName="Xonfi Vendor"
 							routes={routes}
 							onMouseEnter={handleOnMouseEnter}
 							onMouseLeave={handleOnMouseLeave}
@@ -199,7 +199,7 @@ export default function App() {
 					<Sidenav
 						color={sidenavColor}
 						// brand={(transparentSidenav && !darkMode) || whiteSidenav ? brandDark : brandWhite}
-						brandName=" ElimPay Dashboard"
+						brandName=" Xonfi Vendor"
 						routes={routes}
 						onMouseEnter={handleOnMouseEnter}
 						onMouseLeave={handleOnMouseLeave}
@@ -215,7 +215,7 @@ export default function App() {
 				<Route path="/dashboard" element={<Dashboard />} />
 				<Route path="/projects" element={<ProejctsList />} />
 				<Route path="/get-users-profile" element={<UsersProfile />} />
-				<Route path="/sign-up" element={<SignUp />} />
+				<Route path="/authentication/sign-up" element={<SignUp />} />
 				<Route path="/projectDetails" element={<PorjDetails />} />
 				<Route path="/AddProject" element={<AddProject />} />
 				<Route path="/verify-otp" element={<VerifyOtp />} />
