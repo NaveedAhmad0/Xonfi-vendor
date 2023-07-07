@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import OTPInput from "otp-input-react";
 // react-router-dom components
 import { Link, useNavigate } from "react-router-dom";
+import {ToastContainer,toast} from 'react-toastify'
 
 // @mui material components
 import Card from "@mui/material/Card";
@@ -50,20 +51,29 @@ function Basic() {
 			// 	navigate("/admin/dashboard");
 			// }
 			console.log(response?.data);
+			localStorage.setItem("user_data", response.data.user.id);
+			 localStorage.setItem("accessToken", response.data.access_token);
+			 localStorage.setItem("email", response.data.user.email);
 
-			setSuccess(true);
+			//  if(response.data.user.kycStatus === 'approved'){
+
+				setSuccess(true);
+
+			
 			navigate("/dashboard");
-			// if (response.data.statusCode === 200) {
-			// }
+
+			//  }
+			//  else{
+			// 	toast('Your Kyc Is Not Approved Wait For Admin Approval')
+
+			//  }
+
+			
+
+			
+			
 		} catch (err) {
-			// if (!err?.response) {
-			// 	setErrMsg("No Server Response");
-			// } else if (err.response?.status === 400) {
-			// 	setErrMsg("Invalid Credentialials");
-			// 	setSuccess(false);
-			// } else {
-			// 	setErrMsg("Login failed");
-			// }
+			
 			console.log(err);
 		}
 		console.log(await success);
@@ -71,6 +81,7 @@ function Basic() {
 
 	return (
 		<>
+		<ToastContainer></ToastContainer>
 			{success ? (
 				<Dashboard />
 			) : (
@@ -91,7 +102,7 @@ function Basic() {
 								fontWeight="medium"
 								color="white"
 								mt={1}>
-								Admin login
+							Vendor login
 							</MDTypography>
 							<MDTypography
 								className={errMsg ? "errMsg" : "text-danger"}

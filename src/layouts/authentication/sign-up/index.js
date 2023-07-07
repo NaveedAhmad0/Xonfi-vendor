@@ -92,7 +92,10 @@ function Cover() {
 
 	return (
 		<CoverLayout image={bgImage}>
-			<Card>
+			
+				<div className="row">
+					<div className="col py-5">
+					<Card>
 				<MDBox
 					variant="gradient"
 					bgColor="info"
@@ -242,6 +245,11 @@ function Cover() {
 					</MDBox>
 				</MDBox>
 			</Card>
+
+					</div>
+				</div>
+			
+			
 		</CoverLayout>
 	);
 }

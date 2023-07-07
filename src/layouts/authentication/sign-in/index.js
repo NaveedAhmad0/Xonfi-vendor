@@ -87,7 +87,7 @@ function Basic() {
 						mb={1}
 						textAlign="center">
 						<MDTypography variant="h4" fontWeight="medium" color="white" mt={1}>
-							Admin login
+							Vendor login
 						</MDTypography>
 						<MDTypography
 							className={errMsg ? "errMsg" : "text-danger"}
@@ -131,16 +131,16 @@ function Basic() {
 									/>
 								</MDBox> */}
 
-							<MDBox mt={4} mb={1}>
+							 <MDBox mt={4} mb={1}>
 								<MDButton
 									onClick={(event) => onSubmit(event)}
-									href="/admin/dashboard"
+									// href="/admin/dashboard"
 									variant="gradient"
 									color="info"
 									fullWidth>
 									Get Otp
 								</MDButton>
-							</MDBox>
+							</MDBox> 
 
 							<MDBox textAlign="right">
 								<MDTypography variant="button" color="text">

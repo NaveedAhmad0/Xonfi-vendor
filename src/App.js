@@ -65,6 +65,10 @@ import UsersProfile from "layouts/tables/Users Profile/index";
 import SignUp from "layouts/authentication/sign-up/index";
 import PorjDetails from "layouts/Project Details/index";
 import Dashboard from "layouts/dashboard";
+import Passport from "layouts/Kyc/Passport";
+import CashOutRequests from "layouts/Cash out/CashOutRequests";
+import CashOutAcceptedList from "layouts/Cash out/CashOutAcceptedList";
+import Transaction from "layouts/Transaction/TransactionList";
 
 export default function App() {
 	const [controller, dispatch] = useMaterialUIController();
@@ -214,6 +218,12 @@ export default function App() {
 				<Route path="*" element={<Navigate to="/authentication/sign-in" />} />
 				<Route path="/dashboard" element={<Dashboard />} />
 				<Route path="/projects" element={<ProejctsList />} />
+				<Route path="/CreateKYC" element={<ProejctsList />} />
+				<Route path="/passport" element={<Passport></Passport>} />
+				<Route path="/cash-out-request" element={<CashOutRequests></CashOutRequests>} />
+				<Route path="/cash-out-request" element={<CashOutAcceptedList></CashOutAcceptedList>} />
+				<Route path="/transaction" element={<Transaction></Transaction>} />
+
 				<Route path="/get-users-profile" element={<UsersProfile />} />
 				<Route path="/authentication/sign-up" element={<SignUp />} />
 				<Route path="/projectDetails" element={<PorjDetails />} />

@@ -43,6 +43,8 @@ import API from "backend";
 import { useNavigate } from "react-router-dom";
 
 function Dashboard() {
+
+	
 	const { sales, tasks } = reportsLineChartData;
 	const [numberOfProjects, setNumberOfProjects] = useState(0);
 	const [ittems, setItems] = useState([]);

@@ -51,6 +51,10 @@ import ProjectsList from "layouts/Projects/index";
 // @mui icons
 import Icon from "@mui/material/Icon";
 import SignUp from "layouts/authentication/sign-up/index";
+import CreateKyc from "layouts/Kyc/CreateKyc";
+import CashOutRequests from "layouts/Cash out/CashOutRequests";
+import CashOutAcceptedList from "layouts/Cash out/CashOutAcceptedList";
+import Transaction from "layouts/Transaction/TransactionList";
 
 const routes = [
 	{
@@ -63,28 +67,31 @@ const routes = [
 	},
 	{
 		type: "collapse",
-		name: "User Management",
-		key: "tables",
-		icon: <Icon fontSize="small">table_view</Icon>,
-		route: "/tables",
-		component: <Tables />,
+		name: "KYC",
+		key: "KYC",
+		icon: <Icon fontSize="small"><i class="fa-solid fa-id-card-clip"></i></Icon>,
+		route: "/CreateKYC",
+		component: <CreateKyc></CreateKyc>,
 	},
 	{
 		type: "collapse",
-		name: "Project Management",
-		key: "projects",
-		icon: <Icon fontSize="small">assignment</Icon>,
-		route: "/projects",
-		component: <ProjectsList />,
+		name: "Cash Out Request",
+		key: "Cash Out Request",
+		icon: <Icon fontSize="small"><i class="fa-solid fa-money-check-dollar"></i></Icon>,
+		route: "/cash-out-request",
+		component: <CashOutRequests></CashOutRequests>,
 	},
 	{
 		type: "collapse",
-		name: "Transactions",
-		key: "billing",
-		icon: <Icon fontSize="small">receipt_long</Icon>,
-		route: "/billing",
-		component: <Billing />,
+		name: "Accepted Request",
+		key: "Accepted Request",
+		icon: <Icon fontSize="small">R</Icon>,
+		route: "/accepted-cash-out-request",
+		component:<CashOutAcceptedList></CashOutAcceptedList>
 	},
+
+
+
 	// {
 	//   type: "collapse",
 	//   name: "RTL",
@@ -93,22 +100,22 @@ const routes = [
 	//   route: "/rtl",
 	//   component: <RTL />,
 	// },
+	 {
+	   type: "collapse",
+	   name: "Transaction",
+	   key: "Transaction",
+	   icon: <Icon fontSize="small">Transaction</Icon>,
+	   route: "/transaction",
+	   component: <Transaction></Transaction>
+	 },
 	// {
-	//   type: "collapse",
-	//   name: "Notifications",
-	//   key: "notifications",
-	//   icon: <Icon fontSize="small">notifications</Icon>,
-	//   route: "/notifications",
-	//   component: <Notifications />,
+	// 	type: "collapse",
+	// 	name: "Profile",
+	// 	key: "profile",
+	// 	icon: <Icon fontSize="small">person</Icon>,
+	// 	route: "/profile",
+	// 	component: <Profile />,
 	// },
-	{
-		type: "collapse",
-		name: "Profile",
-		key: "profile",
-		icon: <Icon fontSize="small">person</Icon>,
-		route: "/profile",
-		component: <Profile />,
-	},
 	{
 		type: "collapse",
 		name: "Sign Out",
